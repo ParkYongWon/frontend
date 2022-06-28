@@ -83,6 +83,15 @@ crossorigin="anonymous"></script>
         }
     </style>
     <script>
+        $.ajax({
+            type: "GET",
+            url: "http://spartacodingclub.shop/sparta_api/seoulair",
+            data: {},
+            success: function (response) {
+                console.log(response['RealtimeCityAir']['row'])
+            }
+        })
+
         function open_box(){
             $('#post-box').show()
         }
